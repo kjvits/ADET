@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 const cors = require('cors');
 app.use(cors());
 
-app.get('/Admin', (req, res) => {
+app.get('/', (req, res) => {
   res.send("Khurt Vita, NCF");
 });
 
