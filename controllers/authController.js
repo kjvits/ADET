@@ -8,16 +8,19 @@ const register = async (req, res) => {
     try {
         const hashedPassword = await bcrypt.hash(passwordx, 10);
 
-        const [rows] = await pool.query(
-            'INSERT INTO users (fullname, username, passwordx) VALUES (?, ?, ?)',
-            [fullname, username, hashedPassword]
-        );
-
-        res.status(201).json({ message: 'User registered successfully!' });
-    } catch (err) {
-        res.status(500).json({ error: err.message });
-    }
-};
+            const [rows] = await pool.query(
+                'INSERT INTO users (fullname, username, passwordx) VALUES (?, ?, ?)',
+                [fullname, username, hashedPassword]
+            );
+            res.status(201).json({ message: 'User registered successfully!' });
+        } catch (err) {
+          // Enhanced logging for debugging
+          console.error('Database insert error:', err);
+          
+          // Send back the error message to client
+          res.status(500).json({ error: err.message });
+        }
+      };
 
 const login = async (req, res) => {
     const { username, passwordx } = req.body; 
