@@ -10,18 +10,23 @@ https://adet-gicg.onrender.com
 
 ## Endpoints:
 ### Authentication Endpoints:
-- *POST* /api/auth/register: Register a new user.
-- *POST* /api/auth/login: Login and receive a JWT token.
+- *POST* https://adet-gicg.onrender.com/api/auth/register
+- *POST* https://adet-gicg.onrender.com/api/auth/login
 
 ### User Endpoints:
-- *GET* /api/user: Get a list of all users.
+- *GET* https://adet-gicg.onrender.com/api/auth/user
 
 ### Department Endpoints:
-- *POST* /api/dept	: Create a new department.
-- *GET* /api/dept	: Get all departments.
+- *POST* https://adet-gicg.onrender.com/api/dept
+- *GET*  https://adet-gicg.onrender.com/api/dept
 
 ### Course Endpoints:
-- *POST* /api/course: Create a new course.
+- *POST* https://adet-gicg.onrender.com/api/course
+- *GET* https://adet-gicg.onrender.com/api/course
+
+### Student Endpoints:
+- *POST* https://adet-gicg.onrender.com/api/student
+- *GET* https://adet-gicg.onrender.com/api/student
 
 ## GitHub Repository:
 https://github.com/kjvits/ADET.git
