@@ -18,8 +18,29 @@ app.use(bodyParser.json());
 
 // Home route
 app.get('/', (req, res) => {
-  res.send("Khurt Vita, NCF");
+  res.send(`
+    <html>
+      <head>
+        <style>
+          body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+          }
+          h1 {
+            text-align: center;
+          }
+        </style>
+      </head>
+      <body>
+        <h1>Khurt Vita, NCF</h1>
+      </body>
+    </html>
+  `);
 });
+
 
 // API routes
 app.use('/api/auth', authRoutes);
