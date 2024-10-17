@@ -28,14 +28,23 @@ app.get('/', (req, res) => {
             align-items: center;
             height: 100vh;
             margin: 0;
+            font-family: Arial, sans-serif;
           }
           h1 {
             text-align: center;
+            font-size: 24px;
+          }
+          p {
+            text-align: center;
+            font-size: 14px;
           }
         </style>
       </head>
       <body>
-        <h1>Khurt Vita, NCF</h1>
+        <div>
+          <h1>Server is running. Welcome to the API!</h1>
+          <p>Khurt Jayson Vita - College of Computer Science</p>
+        </div>
       </body>
     </html>
   `);
